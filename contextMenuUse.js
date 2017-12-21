@@ -1,4 +1,88 @@
-            var menu = new contextMenu({
+        /****使用外链样式配置右键菜单*****/
+        .kinerMenuBox {
+            width: 200px;
+            background: #FEFEFE;
+            border: solid 1px #444444;
+            cursor: pointer;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow:1px 1px 5px #000, -1px -1px 5px #fff;
+            -webkit-box-shadow: 1px 1px 5px #000,-1px -1px 5px #fff;
+            -moz-box-shadow: 1px 1px 5px #000,-1px -1px 5px #fff;
+            -o-box-shadow: 1px 1px 5px #000,-1px -1px 5px #fff;
+            font-size: 16px;
+            position: absolute;
+        }
+ 
+        .kinerMenuBox .kinerMenuTitle {
+            background: #DDDDDD;
+            padding: 10px 5px;
+            border-bottom: inset #444444 1px;
+            cursor: default
+        }
+ 
+        .kinerMenuBox .kinerMenuTitle .kinerMenuTitleIcon {
+            width: 30px;
+            height: 30px
+        }
+ 
+        .kinerMenuBox .kinerMenuTitle .kinerMenuTitleCon {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+ 
+            color: #444444;
+            font-size: 18px;
+            display: inline-block;
+            vertical-align: top
+        }
+ 
+        .kinerMenuBox .kinerMenuItem {
+            background: #FFF;
+            padding: 5px 5px;
+        }
+ 
+        .kinerMenuBox .kinerMenuItem:hover {
+            background: #CCC;
+        }
+ 
+        .kinerMenuBox .kinerMenuItem .kinerMenuItemIcon {
+            display: inline-block;
+            width: 30px;
+            height: 30px
+        }
+ 
+        .kinerMenuBox .kinerMenuItem .kinerMenuItemCon {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+ 
+            position: relative;
+            color: #444444;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: top
+        }
+ 
+        .kinerMenuBox .kinerSeparator {
+            width: 100%;
+            height: 1px;
+            border-bottom: dashed 1px #444444;
+            /*background: #444444*/
+            border-left: none;
+            border-right: none
+        }
+ 
+        .kinerMenuBox .kinerKeyMap {
+            margin-right: 5px;
+            right: 10px;
+            position: absolute;
+            color: #444444;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+        }            
+var menu = new contextMenu({
                         target: document.getElementById("box"),//开启自定义右键菜单的目标,
                         hasIcon: true,//是否需要图标
                         hasTitle: true,//是否需要标题
